@@ -1,3 +1,57 @@
 # Project exclude paths
 /.gradle/
 /build/
+/.idea/.gitignore
+/.idea/.name
+/run/saves/New World/playerdata/984cf274-9eed-399c-97dc-353ad10f84a8.dat
+/run/saves/New World/playerdata/984cf274-9eed-399c-97dc-353ad10f84a8.dat_old
+/run/saves/New World/advancements/984cf274-9eed-399c-97dc-353ad10f84a8.json
+/run/saves/New World/stats/984cf274-9eed-399c-97dc-353ad10f84a8.json
+/run/logs/2021-08-08-1.log.gz
+/run/logs/2021-08-08-2.log.gz
+/run/logs/2021-08-08-3.log.gz
+/run/logs/2021-08-08-4.log.gz
+/.idea/compiler.xml
+/run/crash-reports/crash-2021-08-08_17.42.19-client.txt
+/run/crash-reports/crash-2021-08-08_17.43.43-client.txt
+/run/crash-reports/crash-2021-08-08_17.46.21-client.txt
+/run/crash-reports/crash-2021-08-08_17.47.46-client.txt
+/run/logs/debug.log
+/run/logs/debug-1.log.gz
+/run/logs/debug-2.log.gz
+/run/logs/debug-3.log.gz
+/run/logs/debug-4.log.gz
+/run/saves/New World/data/fabricDynamicRegistry.dat
+/.idea/gradle.xml
+/run/saves/New World/icon.png
+/run/config/fabric/indigo-renderer.properties
+/.idea/jarRepositories.xml
+/logs/latest.log
+/run/logs/latest.log
+/run/saves/New World/level.dat
+/run/saves/New World/level.dat_old
+/.idea/Limbervill.iml
+/.idea/runConfigurations/Minecraft_Client.xml
+/.idea/runConfigurations/Minecraft_Server.xml
+/.idea/misc.xml
+/run/.mixin.out/audit/mixin_implementation_report.csv
+/run/.mixin.out/audit/mixin_implementation_report.txt
+/run/options.txt
+/run/saves/New World/entities/r.0.0.mca
+/run/saves/New World/poi/r.0.0.mca
+/run/saves/New World/region/r.0.0.mca
+/run/saves/New World/entities/r.0.-1.mca
+/run/saves/New World/poi/r.0.-1.mca
+/run/saves/New World/region/r.0.-1.mca
+/run/saves/New World/entities/r.-1.0.mca
+/run/saves/New World/region/r.-1.0.mca
+/run/saves/New World/entities/r.-1.-1.mca
+/run/saves/New World/region/r.-1.-1.mca
+/run/saves/New World/data/raids.dat
+/run/saves/New World/DIM-1/data/raids.dat
+/run/saves/New World/DIM1/data/raids_end.dat
+/.idea/runConfigurations.xml
+/run/saves/New World/session.lock
+/.idea/uiDesigner.xml
+/run/usercache.json
+/.idea/vcs.xml
