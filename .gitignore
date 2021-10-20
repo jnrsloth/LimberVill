@@ -1,18 +1,7 @@
 # Project exclude paths
 /.gradle/
 /build/
-/.idea/.gitignore
-/.idea/.name
-/.idea/compiler.xml
-/.idea/gradle.xml
-/.idea/jarRepositories.xml
-/logs/latest.log
-/.idea/Limbervill.iml
-/.idea/runConfigurations/Minecraft_Client.xml
-/.idea/runConfigurations/Minecraft_Server.xml
-/.idea/misc.xml
-/.idea/runConfigurations.xml
-/.idea/uiDesigner.xml
-/.idea/vcs.xml
+/.idea/
+/logs/
 /run/
 /runs/

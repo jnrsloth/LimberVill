@@ -1,0 +1,106 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.model.walk": {
+			"loop": true,
+			"animation_length": 0.75,
+			"bones": {
+				"thighRight": {
+					"rotation": {
+						"vector": ["Math.sin(query.anim_time*480)*20", 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": [0, 0, "-Math.sin(query.anim_time*480)*0.4"]
+					}
+				},
+				"torso": {
+					"rotation": {
+						"vector": [0, 0, "Math.sin(query.anim_time*480)*0.5"]
+					}
+				},
+				"thighLeft": {
+					"rotation": {
+						"vector": ["-Math.sin(query.anim_time*480)*20", 0, 0]
+					}
+				},
+				"lowerLegLeft": {
+					"rotation": {
+						"vector": ["Math.clamp(-Math.cos((query.anim_time+100)*480)*20, 0, 20)", 0, 0]
+					}
+				},
+				"lowerLegRight": {
+					"rotation": {
+						"vector": ["Math.clamp(-Math.cos(query.anim_time*480)*20, 0, 20)", 0, 0]
+					},
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"upperArmLeft": {
+					"rotation": {
+						"vector": ["Math.sin(query.anim_time*480)*20", 0, 0]
+					}
+				},
+				"foreArmLeft": {
+					"rotation": {
+						"vector": ["Math.clamp(Math.cos((query.anim_time+10)*480)*30, -30, -5)", 0, 0]
+					}
+				},
+				"upperArmRight": {
+					"rotation": {
+						"vector": ["-Math.sin(query.anim_time*480)*20", 0, 0]
+					}
+				},
+				"foreArmRight": {
+					"rotation": {
+						"vector": ["Math.clamp(-Math.cos((query.anim_time+10)*480)*30, -30, -5)", 0, 0]
+					}
+				},
+				"arms": {
+					"rotation": {
+						"vector": [0, 0, "Math.sin(query.anim_time*480)*0.5"]
+					}
+				}
+			}
+		},
+		"animation.model.idle": {
+			"loop": true,
+			"animation_length": 4.04167,
+			"bones": {
+				"upperArmLeft": {
+					"rotation": {
+						"vector": [-50, 0, "Math.sin(query.anim_time*45)*-3.25+10"]
+					}
+				},
+				"foreArmLeft": {
+					"rotation": {
+						"vector": ["Math.sin(query.anim_time*45)", 0, "Math.sin(query.anim_time*45)*6.5+82"]
+					},
+					"position": {
+						"vector": [0.75, 0, 0]
+					}
+				},
+				"upperArmRight": {
+					"rotation": {
+						"vector": [-50, 0, "-Math.sin(query.anim_time*45)*-3.25-10"]
+					}
+				},
+				"foreArmRight": {
+					"rotation": {
+						"vector": ["Math.sin(query.anim_time*45)", 0, "Math.sin(query.anim_time*45)*-6.5-82"]
+					},
+					"position": {
+						"vector": [-0.5, 0, 0]
+					}
+				},
+				"torso": {
+					"scale": {
+						"vector": ["math.abs(math.sin(query.anim_time*45)*0.01+1)", "math.abs(math.sin(query.anim_time*45)*0.01+1)", "math.abs(math.sin(query.anim_time*45)*0.01+1)"]
+					}
+				}
+			}
+		}
+	}
+}
