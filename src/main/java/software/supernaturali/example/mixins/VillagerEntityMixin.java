@@ -15,7 +15,7 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-//This is essentially where I store the methods needed to extend IAnimatable to make the entity compatible with geckolib
+//This is where I store the methods needed to extend IAnimatable to make the entity compatible with geckolib
 @Mixin(VillagerEntity.class)
 public abstract class VillagerEntityMixin extends MerchantEntity
         implements InteractionObserver, VillagerDataContainer, IAnimatable {
@@ -29,11 +29,27 @@ public abstract class VillagerEntityMixin extends MerchantEntity
     @Override
     public void registerControllers(AnimationData data) {
         data.addAnimationController(new AnimationController<>(this, "controller", 1, this::predicate));
+        data.addAnimationController(new AnimationController<>(this, "headController", 1, this::headPredicate));
+    }
+
+    private <P extends IAnimatable> PlayState headPredicate(AnimationEvent<P> event) {
+        if (this.isSleeping()){
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.model.sleep", true));
+        } else if (this.getHeadRollingTimeLeft() > 0) {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.model.headShake", false));
+        } else if (event.isMoving()) {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.model.headWalk", true));
+        } else {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.model.headIdle", true));
+        }
+        return PlayState.CONTINUE;
     }
 
     @SuppressWarnings("SameReturnValue")
     private <P extends IAnimatable> PlayState predicate(AnimationEvent<P> event) {
-        if (event.isMoving()) {
+        if (this.isSleeping()) {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.model.sleep", true));
+        } else if (event.isMoving()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.model.walk", true));
         } else {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.model.idle", true));

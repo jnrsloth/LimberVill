@@ -10,11 +10,6 @@
 						"vector": ["Math.sin(query.anim_time*480)*20", 0, 0]
 					}
 				},
-				"head": {
-					"rotation": {
-						"vector": [0, 0, "-Math.sin(query.anim_time*480)*0.4"]
-					}
-				},
 				"torso": {
 					"rotation": {
 						"vector": [0, 0, "Math.sin(query.anim_time*480)*0.5"]
@@ -76,10 +71,7 @@
 				},
 				"foreArmLeft": {
 					"rotation": {
-						"vector": ["Math.sin(query.anim_time*45)", 0, "Math.sin(query.anim_time*45)*6.5+82"]
-					},
-					"position": {
-						"vector": [0.75, 0, 0]
+						"vector": [0, "-Math.sin(query.anim_time*45)", "Math.sin(query.anim_time*45)*6+75"]
 					}
 				},
 				"upperArmRight": {
@@ -89,15 +81,68 @@
 				},
 				"foreArmRight": {
 					"rotation": {
-						"vector": ["Math.sin(query.anim_time*45)", 0, "Math.sin(query.anim_time*45)*-6.5-82"]
-					},
-					"position": {
-						"vector": [-0.5, 0, 0]
+						"vector": [0, 0, "Math.sin(query.anim_time*45)*-6-75"]
 					}
 				},
 				"torso": {
 					"scale": {
 						"vector": ["math.abs(math.sin(query.anim_time*45)*0.01+1)", "math.abs(math.sin(query.anim_time*45)*0.01+1)", "math.abs(math.sin(query.anim_time*45)*0.01+1)"]
+					}
+				}
+			}
+		},
+		"animation.model.headShake": {
+			"animation_length": 2.25,
+			"bones": {
+				"head": {
+					"rotation": {
+						"vector": [25, 0, "Math.sin(query.anim_time*450)*23"]
+					}
+				}
+			}
+		},
+		"animation.model.headIdle": {
+			"loop": true,
+			"animation_length": 4.0417
+		},
+		"animation.model.headWalk": {
+			"loop": true,
+			"animation_length": 0.75,
+			"bones": {
+				"head": {
+					"rotation": {
+						"vector": [0, 0, "-Math.sin(query.anim_time*480)*0.4"]
+					}
+				}
+			}
+		},
+		"animation.model.sleep": {
+			"loop": true,
+			"animation_length": 3.95833,
+			"bones": {
+				"leftEye": {
+					"rotation": {
+						"vector": [180, 0, 0]
+					}
+				},
+				"nose": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.0": {
+							"vector": [-2.5, 0, 0]
+						},
+						"2.0": {
+							"vector": [0, 0, 0],
+							"easing": "easeInElastic",
+							"easingArgs": [10]
+						}
+					}
+				},
+				"rightEye": {
+					"rotation": {
+						"vector": [180, 0, 0]
 					}
 				}
 			}

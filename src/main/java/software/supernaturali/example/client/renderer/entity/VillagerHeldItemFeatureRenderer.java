@@ -58,7 +58,7 @@ public class VillagerHeldItemFeatureRenderer <T extends LivingEntity & IAnimatab
             stack.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(0));
             stack.multiply(Vec3f.POSITIVE_Z.getDegreesQuaternion(85));
             //You'll need to play around with this to render the item in the correct spot.
-            stack.translate(-0.525D, -0.5D, 0.11D);//(-0.4D, -0.5D, 0.2D)
+            stack.translate(-0.4D, -0.5D, 0.08D);//(-0.4D, -0.5D, 0.2D)
             //Sets the scaling of the item.
             stack.scale(0.9f, 0.9f, 0.9f);//(0.9f, 0.9f, 0.9f)
             // Change mainHand to predefined Itemstack and TransformType to what transform you would want to use.

@@ -39,7 +39,7 @@ public class VillagerClothingFeatureRenderer<T extends MerchantEntity & Villager
     }
 
     public void render(MatrixStack matrixStackIn, VertexConsumerProvider bufferIn, int packedLightIn, T livingEntity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
-        if (!livingEntity.isInvisible()) {
+        if (!livingEntity.isInvisible() && !livingEntity.isBaby()) { // Child don't get clothes
             VillagerData villagerData = livingEntity.getVillagerData();
             VillagerType villagerType = villagerData.getType();
             VillagerProfession villagerProfession = villagerData.getProfession();
