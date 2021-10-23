@@ -101,6 +101,18 @@
 					}
 				}
 			}
+		},
+		"animation.model.headShake": {
+			"loop": true,
+			"animation_length": 2.25,
+			"bones": {
+				"head": {
+					"rotation": {
+						"vector": [25, 0, "Math.sin(query.anim_time*450)*23"]
+					}
+				}
+			}
 		}
-	}
+	},
+	"geckolib_format_version": 2
 }
