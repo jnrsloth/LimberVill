@@ -17,7 +17,7 @@ import software.supernaturali.example.client.model.entity.ReplacedVillagerModel;
 @Environment(EnvType.CLIENT)
 public class VillagerEntityRenderer<T extends MerchantEntity & IAnimatable & VillagerDataContainer> extends GeoEntityRenderer<T> {
 
-    private String profession;
+    private VillagerProfession profession;
 
     public VillagerEntityRenderer(Context ctx) {
         super(ctx, new ReplacedVillagerModel<>());
@@ -31,13 +31,12 @@ public class VillagerEntityRenderer<T extends MerchantEntity & IAnimatable & Vil
         //store the Render Type Buffer and current texture, we'll need them later.
         super.renderEarly(entity, stackIn, ticks, renderTypeBuffer, bufferIn, packedLightIn, packedOverlayIn, red,
                 green, blue, partialTicks);
-        this.profession = entity.getVillagerData().getProfession().getId();
+        this.profession = entity.getVillagerData().getProfession();
     }
 
     @Override
     public void renderRecursively(GeoBone bone, MatrixStack stack, VertexConsumer bufferIn, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
-        System.out.println(profession);
-        if (profession.equals("weaponsmith") && bone.getName().equals("leftEye")) {
+        if (profession.equals(VillagerProfession.WEAPONSMITH) && bone.getName().equals("leftEye")) {
             bone.setHidden(true);
         }
         super.renderRecursively(bone, stack, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
